@@ -6,13 +6,10 @@
 /*   By: alberrod <alberrod@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 20:57:54 by alberrod          #+#    #+#             */
-/*   Updated: 2023/12/11 20:59:20 by alberrod         ###   ########.fr       */
+/*   Updated: 2023/12/11 23:47:51 by alberrod         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 #include "libft.h"
 
 void	*ft_calloc(size_t count, size_t size)
