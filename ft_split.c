@@ -1,6 +1,16 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include "../libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: alberrod <alberrod@student.42urduliz.com>  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/12/11 21:35:50 by alberrod          #+#    #+#             */
+/*   Updated: 2023/12/11 21:35:56 by alberrod         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 
 static size_t	break_content(char const *s, char c, char **out)
 {

@@ -1,4 +1,16 @@
-#include "../libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: alberrod <alberrod@student.42urduliz.com>  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/12/11 21:10:38 by alberrod          #+#    #+#             */
+/*   Updated: 2023/12/11 21:10:39 by alberrod         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -37,7 +49,7 @@ static int	get_operator(long n)
 	return (operator);
 }
 
-void	build_output(t_number_info *output)
+static	void	build_output(t_number_info *output)
 {
 	int	idx;
 

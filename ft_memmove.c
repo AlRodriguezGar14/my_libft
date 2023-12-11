@@ -1,9 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: alberrod <alberrod@student.42urduliz.com>  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/12/11 21:12:40 by alberrod          #+#    #+#             */
+/*   Updated: 2023/12/11 21:12:42 by alberrod         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 // memmove it can copy forwars and backwards, while memcpy only works forward
 // memmove is safer than memcpy because deals with overlapping buffers
-
-#include <stdio.h>
-#include <stdlib.h>
-#include "../libft.h"
+#include "libft.h"
 
 static void	cpy_from_start_to_end(char *dest, const char *src, size_t n)
 {

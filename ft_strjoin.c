@@ -1,6 +1,16 @@
-#include <stdlib.h>
-#include <stdio.h>
-#include "../libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: alberrod <alberrod@student.42urduliz.com>  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/12/11 21:17:07 by alberrod          #+#    #+#             */
+/*   Updated: 2023/12/11 21:17:34 by alberrod         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -17,27 +27,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ft_strlcat(output, (char *)s2, total_len);
 	return (output);
 }
-// char *ft_strjoin(char const *s1, char const *s2)
-// {
-//	   size_t s1_len = ft_strlen(s1);
-//	   size_t total_len = s1_len + ft_strlen(s2);
-//	   size_t idx = 0;
-//	   char *output = (char *)malloc((total_len) * sizeof(char));
-//	   if (output == NULL) return NULL;
-//
-//	   while (idx < s1_len)
-//	   {
-//		   output[idx] = *s1;
-//		   idx++;
-//		   s1++;
-//	   }
-//	   while (idx < total_len)
-//	   {
-//		   output[idx] = *s2;
-//		   idx++;
-//		   s2++;
-//	   }
-//	   output[idx] = '\0';
-//
-//	   return output;
-// }

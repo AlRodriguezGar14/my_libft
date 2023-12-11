@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: alberrod <alberrod@student.42urduliz.com>  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/12/11 21:12:54 by alberrod          #+#    #+#             */
+/*   Updated: 2023/12/11 21:13:06 by alberrod         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 /*
 The memset function copies the value of c (converted to an unsigned char)
 into each of the first n characters of the object pointed to by s.
@@ -11,7 +23,7 @@ into each of the first n characters of the object pointed to by s.
 // Casting to unsigned char is very important to guarantee non-wanted behavior
 // and data overflows
 // it is also the way the original function operates
-#include <stdlib.h>
+#include "libft.h"
 
 void	*ft_memset(void *buffer, int val, size_t len)
 {
