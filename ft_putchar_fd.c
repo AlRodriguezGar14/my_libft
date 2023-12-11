@@ -6,11 +6,12 @@
 /*   By: alberrod <alberrod@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 21:13:36 by alberrod          #+#    #+#             */
-/*   Updated: 2023/12/11 21:13:38 by alberrod         ###   ########.fr       */
+/*   Updated: 2023/12/11 22:17:25 by alberrod         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);

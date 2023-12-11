@@ -1,18 +1,28 @@
-#ifndef LIBFT
-# define LIBFT
-#define TRUE 1
-#define FALSE 0
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: alberrod <alberrod@student.42urduliz.com>  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/12/11 22:17:45 by alberrod          #+#    #+#             */
+/*   Updated: 2023/12/11 22:21:01 by alberrod         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include <stdio.h>
-#include <unistd.h>
-#include <string.h>
-#include <stdlib.h>
+#ifndef LIBFT_H
+# define LIBFT_H 
 
-typedef struct	s_list
+# include <stdio.h>
+# include <unistd.h>
+# include <string.h>
+# include <stdlib.h>
+
+typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
-} t_list;
+}	t_list;
 
 int		ft_isalnum(int c);
 int		ft_tolower(int c);
