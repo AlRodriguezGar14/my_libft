@@ -5,7 +5,7 @@ int	ft_isalpha(int	c)
 	return (0);
 }
 
-
+/*
 #include <ctype.h>
 #include <stdio.h>
 #include <string.h>
@@ -15,6 +15,33 @@ int	ft_isalpha(int	c)
 #define COLOR_RESET   "\x1b[0m"
 #define COLOR_YELLOW  "\x1b[38;5;178m"
 #define COLOR_CYAN	  "\x1b[36m"
+
+void print_test_title(char *title) {
+    printf("\n");
+    int idx = 0;
+    while (title[idx] != 0)
+        idx++;
+
+    while (idx > -4) 
+    {
+        idx--;
+        printf("-");
+    }
+    printf("\n| ");
+    idx = 0;
+    while (title[idx] != 0)
+    {
+        printf("%c", title[idx]);
+        idx++;
+    }
+    printf(" |\n");
+    while (idx > -4)
+    {
+        idx--;
+        printf("-");
+    }
+    printf("\n");
+}
 
 void print_pass_int(int original, int copy)
 {
@@ -62,6 +89,8 @@ void test_char_type()
 
 int	main(void)
 {
+	print_test_title("isalpha");
 	test_char_type();
 	return (0);
 }
+*/
