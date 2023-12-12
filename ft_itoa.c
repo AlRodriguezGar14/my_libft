@@ -5,87 +5,84 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: alberrod <alberrod@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/11 21:10:38 by alberrod          #+#    #+#             */
-/*   Updated: 2023/12/11 22:15:33 by alberrod         ###   ########.fr       */
+/*   Created: 2023/12/12 17:52:47 by alberrod          #+#    #+#             */
+/*   Updated: 2023/12/12 19:50:10 by alberrod         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
 
-typedef struct number_info
+static int	get_simbol(int n)
 {
-	char	*out;
-	int		len;
-	int		simbol;
-	int		operator;
-	long	out_n;
-}	t_number_info;
+	if (n < 0)
+		return (-1);
+	return (1);
+}
 
-static int	get_length(int n)
+static int	get_len(long n, int simbol)
 {
 	int	len;
 
-	len = 1;
+	len = 0;
 	while (n > 0)
 	{
-		len++;
 		n /= 10;
+		len++;
 	}
+	if (simbol < 0)
+		len++;
 	return (len);
 }
 
-static int	get_operator(long n)
+static long	raise_operator(int len)
 {
-	int	operator;
+	int	n;
 
-	operator = 1;
-	while (n > 9)
-	{
-		n /= 10;
-		operator *= 10;
-	}
-	return (operator);
+	n = 1;
+	while (--len > 1)
+		n *= 10;
+	return (n);
 }
 
-static	void	build_output(t_number_info *output)
+static char	*num_to_str(long num, int len, char *charnum, int simbol)
 {
-	int	idx;
+	long	operator;
+	int		idx;
 
+	operator = raise_operator(len);
 	idx = 0;
-	if (output->simbol < 0)
+	if (simbol < 0)
 	{
-		output->out[idx] = '-';
+		*charnum++ = '-';
 		idx++;
 	}
-	while (idx < output->len - 1)
+	while (len-- > 1)
 	{
-		output->out[idx] = (output->out_n / output->operator) + '0';
-		output->out_n %= output->operator;
-		output->operator /= 10;
+		*charnum++ = (num / operator) + '0';
+		num %= operator;
+		operator /= 10;
 		idx++;
 	}
-	output->out[idx] = '\0';
+	return (charnum - idx);
 }
 
 char	*ft_itoa(int n)
 {
-	t_number_info	output;
+	int		simbol;
+	int		len;
+	long	positive_n;
+	char	*out;
 
-	if (n < 0)
-		output.simbol = -1;
-	else
-		output.simbol = 1;
-	output.out_n = n;
-	output.out_n *= output.simbol;
-	output.operator = get_operator(output.out_n);
-	output.len = get_length(output.operator);
-	if (output.simbol < 0)
-		output.len++;
-	output.out = (char *)malloc((output.len) * sizeof(char));
-	if (!output.out)
-		return (NULL);
-	build_output(&output);
-	return (output.out);
+	simbol = get_simbol(n);
+	positive_n = n * simbol;
+	len = get_len(positive_n, simbol);
+	out = ft_calloc(len + 1, sizeof(char));
+	num_to_str(positive_n, len, out, simbol);
+	return (out);
 }
+
+/* int	main(void) */
+/* { */
+/* 	printf("charnum: %s\n", ft_itoa2(-1234)); */
+/* 	return (0); */
+/* } */
