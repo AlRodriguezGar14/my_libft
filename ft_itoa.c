@@ -6,7 +6,7 @@
 /*   By: alberrod <alberrod@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 17:52:47 by alberrod          #+#    #+#             */
-/*   Updated: 2023/12/12 21:00:28 by alberrod         ###   ########.fr       */
+/*   Updated: 2023/12/12 21:03:27 by alberrod         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,16 +50,12 @@ static char	*num_to_str(long num, int len, char *charnum, int simbol)
 {
 	long	operator;
 	int		idx;
-	int	length_conditional;
-
+	int		length_conditional;
 
 	length_conditional = 0;
 	if (simbol < 0)
 		length_conditional = 1;
-
 	operator = raise_operator(len, length_conditional);
-	/* printf("num: %ld\n", num); */
-	/* printf("operator: %ld\n", operator); */
 	idx = 0;
 	if (simbol < 0)
 	{
@@ -69,9 +65,6 @@ static char	*num_to_str(long num, int len, char *charnum, int simbol)
 	while (len-- > length_conditional)
 	{
 		*charnum++ = (num / operator) + '0';
-		/* printf("operator: %ld\n", operator); */
-		/* printf("num / operator: %ld\n", num); */
-		/* printf("num: %ld\n", num); */
 		num %= operator;
 		operator /= 10;
 		idx++;
@@ -97,10 +90,7 @@ char	*ft_itoa(int n)
 	positive_n = n;
 	simbol = get_simbol(n);
 	positive_n *= simbol;
-	/* printf("simbol: %i\n", simbol); */
-	/* printf("positive: %ld\n", positive_n); */
 	len = get_len(positive_n, simbol);
-	/* printf("len: %i\n", len); */
 	out = ft_calloc(len + 1, sizeof(char));
 	if (!out)
 		return (NULL);
@@ -113,6 +103,6 @@ char	*ft_itoa(int n)
 /* 	/1* printf("charnum: %s\n", ft_itoa(8124)); *1/ */
 /* 	/1* printf("charnum: %s\n", ft_itoa(543000)); *1/ */
 /* 	printf("charnum: %s\n", ft_itoa(0)); */
-/* 	/1* printf("charnum: %s\n", ft_itoa(2147483647)); *1/ */
+/* 	/1* printf("charnum: %s\n", ft_itoa(-2147483648)); *1/ */
 /* 	return (0); */
 /* } */
