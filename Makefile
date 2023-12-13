@@ -14,14 +14,21 @@ CFILES = ft_calloc.c ft_isdigit.c ft_memcmp.c ft_putchar_fd.c ft_split.c \
 
 OFILES = $(CFILES:.c=.o)
 
+CBONUSS = ft_lstadd_back.c ft_lstdelone.c ft_lstmap.c ft_lstadd_front.c	\
+		  ft_lstiter.c ft_lstnew.c ft_lstclear.c ft_lstlast.c ft_lstsize.c
 
-all: $(NAME) clean
+OBONUSS = $(CBONUSS:.c=.o)
+
+all: $(NAME)
 
 $(NAME): $(OFILES)
 	ar rcs $(NAME) $(OFILES)
 
+bonus: $(OBONUSS)
+	ar rcs $(NAME) $(OBONUSS)
+
 clean:
-	$(RM) $(OFILES)
+	$(RM) $(OFILES) $(OBONUSS)
 
 fclean: clean
 	$(RM) $(NAME)
