@@ -1,6 +1,18 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: alberrod <alberrod@student.42urduliz.com>  +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2023/12/13 18:30:09 by alberrod          #+#    #+#              #
+#    Updated: 2023/12/13 19:07:39 by alberrod         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 CC       = cc
 HEADERS_DIR = .
-CFLAGS   = -Wall -Wextra -Werror -ggdb -pedantic -I $(HEADERS_DIR)
+CFLAGS   = -Wall -Wextra -Werror -I $(HEADERS_DIR)
 NAME     = libft.a
 RM       = rm -rf
 
@@ -14,19 +26,27 @@ CFILES = ft_calloc.c ft_isdigit.c ft_memcmp.c ft_putchar_fd.c ft_split.c \
 
 OFILES = $(CFILES:.c=.o)
 
+CBONUSS = ft_lstadd_back_bonus.c ft_lstdelone_bonus.c ft_lstmap_bonus.c \
+		  ft_lstadd_front_bonus.c ft_lstiter_bonus.c ft_lstnew_bonus.c \
+		  ft_lstclear_bonus.c ft_lstlast_bonus.c ft_lstsize_bonus.c
 
-all: $(NAME) clean
+OBONUSS = $(CBONUSS:.c=.o)
+
+all: $(NAME)
 
 $(NAME): $(OFILES)
 	ar rcs $(NAME) $(OFILES)
 
+bonus: $(OBONUSS)
+	ar rcs $(NAME) $(OBONUSS)
+
 clean:
-	$(RM) $(OFILES)
+	$(RM) $(OFILES) $(OBONUSS)
 
 fclean: clean
 	$(RM) $(NAME)
 
-re: fclean $(NAME)
+re: fclean $(NAME) bonus
 
 .PHONY: all clean fclean re
  
