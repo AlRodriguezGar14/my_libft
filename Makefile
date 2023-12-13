@@ -6,7 +6,7 @@
 #    By: alberrod <alberrod@student.42urduliz.com>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/13 18:30:09 by alberrod          #+#    #+#              #
-#    Updated: 2023/12/13 18:30:16 by alberrod         ###   ########.fr        #
+#    Updated: 2023/12/13 19:07:39 by alberrod         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,7 +46,7 @@ clean:
 fclean: clean
 	$(RM) $(NAME)
 
-re: fclean $(NAME)
+re: fclean $(NAME) bonus
 
 .PHONY: all clean fclean re
  
