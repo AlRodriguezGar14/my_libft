@@ -6,7 +6,7 @@
 /*   By: alberrod <alberrod@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 21:30:26 by alberrod          #+#    #+#             */
-/*   Updated: 2023/12/13 20:19:54 by alberrod         ###   ########.fr       */
+/*   Updated: 2023/12/13 20:51:26 by alberrod         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	substr = (char *)ft_calloc((len + 1), sizeof(char));
 	if (!substr)
 		return (NULL);
-	ft_memmove(substr, (void *)(s + start), len);
+	ft_strlcpy(substr, (s + start), len + 1);
 	return (substr);
 }
