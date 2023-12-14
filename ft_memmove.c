@@ -16,26 +16,14 @@
 
 static void	cpy_from_start_to_end(char *dest, const char *src, size_t n)
 {
-	size_t	idx;
-
-	idx = 0;
-	while (idx < n)
-	{
-		dest[idx] = src[idx];
-		idx++;
-	}
+	while (n--)
+		*dest++ = *src++;
 }
 
 static void	cpy_from_end_to_start(char *dest, const char *src, size_t n)
 {
-	size_t	idx;
-
-	idx = n;
-	while (idx > 0)
-	{
-		dest[idx - 1] = src[idx - 1];
-		idx--;
-	}
+	while (n--)
+		dest[n] = src[n];
 }
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
