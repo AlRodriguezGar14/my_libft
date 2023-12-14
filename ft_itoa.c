@@ -6,7 +6,7 @@
 /*   By: alberrod <alberrod@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 17:52:47 by alberrod          #+#    #+#             */
-/*   Updated: 2023/12/12 21:03:27 by alberrod         ###   ########.fr       */
+/*   Updated: 2023/12/14 16:00:07 by alberrod         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ char	*ft_itoa(int n)
 
 	if (n == 0)
 	{
-		out = strdup("0");
+		out = ft_strdup("0");
 		return (out);
 	}
 	positive_n = n;
