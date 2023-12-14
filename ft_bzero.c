@@ -18,7 +18,5 @@ void	ft_bzero(void *buffer, size_t len)
 
 	p = buffer;
 	while (len--)
-	{
 		*p++ = 0;
-	}
 }
