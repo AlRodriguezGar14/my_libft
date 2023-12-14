@@ -81,7 +81,7 @@ char	*ft_itoa(int n)
 
 	if (n == 0)
 	{
-		out = strdup("0");
+		out = ft_strdup("0");
 		return (out);
 	}
 	positive_n = n;
