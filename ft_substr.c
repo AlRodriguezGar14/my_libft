@@ -33,7 +33,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	substr = (char *)ft_calloc((len + 1), sizeof(char));
 	if (!substr)
 		return (NULL);
-	ft_memcpy(substr, (void *)(s + start), len + 1);
+	ft_memcpy(substr, (void *)(s + start), len);
 	substr[len] = '\0';
 	return (substr);
 }
