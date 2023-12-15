@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_atoi(const char *str)
 {
@@ -28,7 +28,7 @@ int	ft_atoi(const char *str)
 	else if (*str == '+')
 		str++;
 	output = 0;
-	while (*str >= '0' && *str <= '9')
+	while (ft_isdigit(*str))
 	{
 		output = output * 10 + (*str - '0');
 		str++;
