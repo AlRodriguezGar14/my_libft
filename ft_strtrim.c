@@ -12,20 +12,6 @@
 
 #include "libft.h"
 
-static int	check_match(const char haystack, const char *needle)
-{
-	size_t	idx;
-
-	idx = 0;
-	while (needle[idx])
-	{
-		if (haystack == needle[idx])
-			return (0);
-		idx++;
-	}
-	return (ft_isprint(haystack));
-}
-
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	start;
@@ -35,7 +21,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	start = 0;
 	if (!s1)
 		return (NULL);
-	while (s1[start] && check_match(s1[start], set) == 0)
+	while (s1[start] && ft_strchr(set, s1[start]))
 		start++;
 	if (start == ft_strlen(s1))
 	{
@@ -45,20 +31,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (output);
 	}
 	end = ft_strlen(s1);
-	while (end > start && check_match(s1[end], set) == 0)
+	while (end > start && ft_strchr(set, s1[end]))
 		end--;
-	output = (char *)ft_calloc((end - start) + 2, sizeof(char));
-	if (output == NULL)
-		return (NULL);
-	s1 += start;
-	ft_strlcpy(output, s1, (end - start) + 2);
+	output = ft_substr(s1, start, (end - start) + 1);
 	return (output);
 }
-//
-// int main() {
-//	   char *s1 = "\n\t  hola ";
-//	   char *s2 = "";
-//
-//	   char *out = ft_strtrim(s1, s2);
-//	   printf("out: %s\n", out);
-// }
