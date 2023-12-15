@@ -6,7 +6,7 @@
 /*   By: alberrod <alberrod@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 17:52:47 by alberrod          #+#    #+#             */
-/*   Updated: 2023/12/14 16:00:07 by alberrod         ###   ########.fr       */
+/*   Updated: 2023/12/15 08:05:39 by alberrod         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ static long	raise_operator(int len, int length_conditional)
 }
 
 // Length conditional depends on the simbol
-// If there's negative symbol, the length has an extra space
+// If there's negative simbol, the length has an extra space
 static char	*num_to_str(long num, int len, char *charnum, int simbol)
 {
 	long	operator;

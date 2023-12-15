@@ -6,7 +6,7 @@
 /*   By: alberrod <alberrod@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 21:35:50 by alberrod          #+#    #+#             */
-/*   Updated: 2023/12/11 21:35:56 by alberrod         ###   ########.fr       */
+/*   Updated: 2023/12/15 08:05:06 by alberrod         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,27 +96,3 @@ char	**ft_split(char const *s, char c)
 	}
 	return (out);
 }
-
-// int main() {
-//    char **result;
-//    int i;
-//
-//    // Test 1
-//    result = ft_split("		split		this for   me  !	   ",  ' ');
-//    printf("Test 1:\n");
-//    for (i = 0; result[i] != NULL; i++) {
-// 	   printf("%s\n", result[i]);
-// 	   free(result[i]);
-//    }
-//    free(result);
-//
-//    result = ft_split(",,,,", ',');
-//    printf("\nTest 3:\n");
-//    for (i = 0; result[i] != NULL; i++) {
-// 	   printf("%s\n", result[i]);
-// 	   free(result[i]);
-//    }
-//    free(result);
-//
-//    return 0;
-// }
