@@ -15,15 +15,19 @@
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	size_t	total_len;
+	size_t	len_s1;
+	size_t	len_s2;
 	char	*output;
 
 	if (!s1)
 		return (NULL);
-	total_len = ft_strlen(s1) + 1 + ft_strlen(s2) + 1;
-	output = (char *)ft_calloc(total_len - 1, sizeof(char));
+	len_s1 = ft_strlen(s1);
+	len_s2 = ft_strlen(s2);
+	total_len = len_s1 + len_s2 + 1;
+	output = (char *)ft_calloc(total_len, sizeof(char));
 	if (output == NULL)
 		return (NULL);
-	ft_strlcat(output, (char *)s1, total_len);
-	ft_strlcat(output, (char *)s2, total_len);
+	ft_memcpy(output, (char *)s1, len_s1);
+	ft_memcpy(output + len_s1, (char *)s2, len_s2);
 	return (output);
 }
