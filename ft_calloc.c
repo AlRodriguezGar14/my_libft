@@ -14,7 +14,6 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	char	*assignable;
 	size_t	total;
 	void	*allocated;
 
@@ -22,7 +21,6 @@ void	*ft_calloc(size_t count, size_t size)
 	allocated = malloc(total);
 	if (allocated == NULL)
 		return (NULL);
-	assignable = (char *)allocated;
-	ft_memset(assignable, 0, total);
+	ft_memset(allocated, 0, total);
 	return (allocated);
 }
