@@ -15,15 +15,13 @@
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	idx;
+	int		lexicographic_return;
 
-	idx = 0;
+	idx = -1;
 	if (!n)
 		return (0);
-	while (idx < n - 1 && *s1 == *s2 && (*s1 != '\0' || *s2 != '\0'))
-	{
-		idx++;
-		s1++;
-		s2++;
-	}
-	return ((unsigned char)*s1 - (unsigned char)*s2);
+	while (++idx < n - 1 && s1[idx] == s2[idx] && s1[idx])
+		;
+	lexicographic_return = ((unsigned char)s1[idx] - (unsigned char)s2[idx]);
+	return (lexicographic_return);
 }
