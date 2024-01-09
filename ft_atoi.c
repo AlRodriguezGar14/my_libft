@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alberrod <alberrod@student.42urduliz.com>      +#+  +:+       +#+    */
+/*   By: alberrod <alberrod@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 20:55:16 by alberrod          #+#    #+#             */
-/*   Updated: 2023/12/11 20:55:32 by alberrod         ###   ########.fr       */
+/*   Updated: 2023/12/21 22:24:44 by alberrod         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
