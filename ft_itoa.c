@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alberrod <alberrod@student.42urduliz.com>  +#+  +:+       +#+        */
+/*   By: alberrod <alberrod@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 17:52:47 by alberrod          #+#    #+#             */
-/*   Updated: 2023/12/15 08:05:39 by alberrod         ###   ########.fr       */
+/*   Updated: 2024/01/26 06:34:43 by alberrod         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -6,7 +6,7 @@
 /*   By: alberrod <alberrod@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 22:17:45 by alberrod          #+#    #+#             */
-/*   Updated: 2024/01/09 22:01:26 by alberrod         ###   ########.fr       */
+/*   Updated: 2024/01/28 00:05:49 by alberrod         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,6 +97,15 @@ int					ft_printstr(char *s);
 int					ft_printnbr(long nbr, int base, char *nbr_formatter);
 int					ft_printchar(int c);
 int					ft_print_addr(unsigned long nbr,
+						int base, char *nbr_formatter);
+
+// fd_printf && fd_printf utils
+int					ft_fd_printf(int fd, const char *fmt, ...);
+int					ft_fd_printstr(int fd, char *s);
+int					ft_fd_printnbr(int fd, long nbr, int base,
+						char *nbr_formatter);
+int					ft_fd_printchar(int fd, int c);
+int					ft_fd_print_addr(int fd, unsigned long nbr,
 						int base, char *nbr_formatter);
 
 // Get next line 
