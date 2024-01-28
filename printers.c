@@ -14,7 +14,7 @@
 
 int	ft_printchar(int c)
 {
-	return (write(FD_STDERR, &c, 1));
+	return (write(FD_STDOUT, &c, 1));
 }
 
 int	ft_print_addr(unsigned long nbr, int base, char *nbr_formatter)
